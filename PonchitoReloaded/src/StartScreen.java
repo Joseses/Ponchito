@@ -17,8 +17,16 @@ public class StartScreen {
     boolean animated=false;
     TranslateTransition transition = new TranslateTransition(Duration.seconds(0.25), greeText);
 
-    public void onClic(ActionEvent actionEvent) {
-        this.greeText.setTranslateY(200);
+    public void onClic(ActionEvent actionEvent) throws Exception {
+        Object source = actionEvent.getSource();
+        Main instancia = Main.getInstance();
+        if (source instanceof Button) {
+            Button clickedBtn = (Button) source; // Botón del clic
+            if(clickedBtn.getText().equalsIgnoreCase("Agente")) {
+                instancia.gotoFolleto("Agente");
+            }
 
+        }
     }
+
 }
