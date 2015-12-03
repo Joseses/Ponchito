@@ -1,5 +1,5 @@
-public class Simulacion
-{
+public class Simulacion {
+
 	private int idestimacion;
 	private String cliente;
 	private String nombrePersona;
@@ -8,6 +8,8 @@ public class Simulacion
 	private int numPersonas;
 	private int localizacion;
 	private double precio;
+    private Circuito[] circuitos;
+    private Hotel[] hoteles;
 	
 	public Simulacion(){
 		idestimacion = 0;
@@ -15,7 +17,7 @@ public class Simulacion
 		nombrePersona = new String();
 		fechaSalida = new String();
 		fechaLlegada = new String();
-		numPersonas = 0
+		numPersonas = 0;
 		localizacion = 0;
 		precio = 0;
 	}
