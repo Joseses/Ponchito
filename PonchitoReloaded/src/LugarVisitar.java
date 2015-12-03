@@ -4,6 +4,7 @@ public class LugarVisitar {
 	private String direccion;
 	private String descripcion;
 	private double precio;
+    private double duracion;
 	
 	public LugarVisitar(){
 		nombre = "";
@@ -34,4 +35,11 @@ public class LugarVisitar {
 	public void setDescripcion(String des){descripcion = des;}
 	public void setPrecio(int p){precio = p;}
 
+    public double getDuracion() {
+        return duracion;
+    }
+
+    public void setDuracion(double duracion) {
+        this.duracion = duracion;
+    }
 }

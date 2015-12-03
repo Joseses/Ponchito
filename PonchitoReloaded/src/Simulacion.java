@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class Simulacion {
 
 	private int idestimacion;
@@ -6,23 +8,24 @@ public class Simulacion {
 	private String fechaSalida;
 	private String fechaLlegada;
 	private int numPersonas;
-	private int localizacion;
+	private String[] localizacion;
 	private double precio;
-    private Circuito[] circuitos;
-    private Hotel[] hoteles;
+    private ArrayList<Circuito> circuitos;
+    private ArrayList<Hotel> hoteles;
 	
 	public Simulacion(){
 		idestimacion = 0;
-		cliente = new String();
-		nombrePersona = new String();
-		fechaSalida = new String();
-		fechaLlegada = new String();
+		cliente = "";
+		nombrePersona = "";
+		fechaSalida = "";
+		fechaLlegada = "";
 		numPersonas = 0;
-		localizacion = 0;
+		localizacion = new String[2];
 		precio = 0;
+        circuitos = new ArrayList<Circuito>();
 	}
 	
-	public Simulacion(int id, String uncliente, String nombre, String fs, String fll, int per, int loc, double pre){
+	public Simulacion(int id, String uncliente, String nombre, String fs, String fll, int per, String[] loc, double pre){
 		idestimacion = id;
 		cliente = uncliente;
 		nombrePersona = nombre;
@@ -39,7 +42,7 @@ public class Simulacion {
 	public String getFechaSalida(){return fechaSalida;}
 	public String getFechaLlegada(){return fechaLlegada;}
 	public int getNumPersonas(){return numPersonas;}
-	public int getLocalizacion(){return localizacion;}
+	public String[] getLocalizacion(){return localizacion;}
 	public double getPrecio(){return precio;}
 	
 	public void setIdestimacion(int id){
@@ -60,11 +63,34 @@ public class Simulacion {
 	public void setNumPersonas(int per){
 		numPersonas = per;
 	}
-	public void setLocalizacion(int loc){
+	public void setLocalizacion(String[] loc){
 		localizacion = loc;
 	}
 	public void setPrecio(double pre){
 		precio = pre;
 	}
-	
+
+    public ArrayList<Circuito> getCircuitos() {
+        return circuitos;
+    }
+
+    public void setCircuitos(ArrayList<Circuito> circuitos) {
+        this.circuitos = circuitos;
+    }
+
+    public void addCircuito(Circuito circuito) {
+        this.circuitos.add(circuito);
+    }
+
+    public ArrayList<Hotel> getHoteles() {
+        return hoteles;
+    }
+
+    public void setHoteles(ArrayList<Hotel> hoteles) {
+        this.hoteles = hoteles;
+    }
+
+    public void addHotel(Hotel hotel) {
+        this.hoteles.add(hotel);
+    }
 }

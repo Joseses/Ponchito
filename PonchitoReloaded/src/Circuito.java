@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class Circuito {
 	private int idcircuito;
 	private String descripcion;
@@ -5,6 +7,8 @@ public class Circuito {
 	private String[] lugarLlegada;
 	private String duracion;
 	private double precio;
+    private ArrayList<LugarVisitar> etapa;
+    private String fecha;
 	
 	public Circuito() {
 		idcircuito=0;
@@ -13,6 +17,7 @@ public class Circuito {
 		lugarLlegada= new String[2];
 		duracion = "";
 		precio = 0;
+        etapa = new ArrayList<LugarVisitar>();
 	}
 	
 	public Circuito(int id, String des, String[] sal, String[] lle, String dur, int p) {
@@ -37,4 +42,20 @@ public class Circuito {
 	public void setLugarLlegada(String[] lle){lugarLlegada=lle;}
 	public void setDuracion(String dur){duracion = dur;}
 	public void setPrecio(int p){precio = p;}
+
+    public ArrayList<LugarVisitar> getEtapa() {
+        return etapa;
+    }
+
+    public void setEtapa(ArrayList<LugarVisitar> etapa) {
+        this.etapa = etapa;
+    }
+
+    public void addEtapa(LugarVisitar lugarVisitar) {
+        this.etapa.add(lugarVisitar);
+    }
+
+    public String sqlfyThisCircuit(){
+        return null;
+    }
 }

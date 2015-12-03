@@ -8,9 +8,9 @@ public class Hotel {
     double precioDesayuno;
 
     public Hotel() {
-        nombreHotel = new String();
+        nombreHotel = "";
         localizacion = new String[2];
-        direccion = new String();
+        direccion = "";
         numCuartos = 0;
         precioCuarto = 0;
         precioDesayuno = 0;
@@ -28,47 +28,36 @@ public class Hotel {
     public String getNombreHotel() {
         return nombreHotel;
     }
-
     public String[] getLocalizacion() {
         return localizacion;
     }
-
     public String getDireccion() {
         return direccion;
     }
-
     public int getNumCuartos() {
         return numCuartos;
     }
-
     public double getPrecioCuarto() {
         return precioCuarto;
     }
-
     public double getPrecioDesayuno() {
         return precioDesayuno;
     }
-
     public void setNombreHotel(String nomh) {
         nombreHotel = nomh;
     }
-
     public void setLocalizacion(String[] loc) {
         localizacion = loc;
     }
-
     public void setDireccion(String dir) {
         direccion = dir;
     }
-
     public void setNumCuartos(int numc) {
         numCuartos = numc;
     }
-
     public void setPrecioCuarto(double precc) {
         precioCuarto = precc;
     }
-
     public void setPreioDesayuno(double precd) {
         precioDesayuno = precd;
     }
