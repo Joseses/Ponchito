@@ -1,0 +1,44 @@
+.buttons {
+	-fx-font-size: 22px;
+	-fx-text-fill: white;
+	-fx-background-color: #f1c40f;
+	-fx-border-width: 0 0 2 0;
+	-fx-border-style: solid;
+	-fx-border-color: #e2b607;
+	-fx-font-family: "Roboto Condensed";
+}
+
+#initialText {
+	-fx-font-family: "Roboto Condensed Light";
+	-fx-font-size: 40px;
+}
+
+#cliente{
+	-fx-background-color: #1abc9c;
+	-fx-border-color: #12ab8d;
+	-fx-effect: dropshadow(three-pass-box,#12ab8d, -2, 0, 0, 0);
+}
+
+#cliente:hover{
+	-fx-background-color: #17a689;
+	-fx-border-color: #10947a;
+	-fx-effect: dropshadow(three-pass-box,#10947a, 2, 0, 0, 0);
+}
+
+#agente:hover {
+	-fx-background-color:#dab10d;
+	-fx-border-color: #c9a206;
+	-fx-effect: dropshadow(three-pass-box,#e2b607, 2, 0, 0, 0);
+}
+
+#invitado {
+	-fx-background-color: #c0392b;
+	-fx-border-color: #b53224;
+	-fx-effect: dropshadow(three-pass-box,#b53224, -2, 0, 0, 0);
+}
+
+#invitado:hover {
+	-fx-background-color: #ab3326;
+	-fx-border-color: #a02c20;
+	-fx-effect: dropshadow(three-pass-box,#a02c20, 2, 0, 0, 0);
+}
