@@ -8,9 +8,7 @@ public class Puente {
 
     static final String CONN_URL = "jdbc:mysql://localhost/"; //Por defecto 127.0.0.1 o localhost
     static final String USER = "root"; //usuario de la base de datos
-    static final String PASSWD = ""; //contraseña
-    static final String DB_NAME = "metadata_search";      /* nombre de la base de datos */
-    static final String PRE_STMT = "select * from document";
+    static final String DB_NAME = "ponchito";      /* nombre de la base de datos */
 
 	public Puente(String pass) throws SQLException, Exception {
 

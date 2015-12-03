@@ -6,6 +6,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 public class Main extends Application {
     private Stage stage;
@@ -71,7 +72,14 @@ public class Main extends Application {
             pass = pass + args[i];
         }
         puente = new Puente(pass);
-        launch();
+        //launch();
+        MetaCreador metaCreador = new MetaCreador(puente);
+        ArrayList<LugarVisitar> lugares = metaCreador.crearLugar();
+        for(int i = 0; i<lugares.size();i++) {
+            LugarVisitar lugarVisitar = lugares.get(i);
+            System.out.println(lugarVisitar.getNombre());
+        }
+
     }
 
     public void cerrarVentana() {
