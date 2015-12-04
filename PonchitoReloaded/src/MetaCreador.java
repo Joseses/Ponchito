@@ -60,4 +60,15 @@ public class MetaCreador {
         }
         return circuitos;
     }
+
+    public Agente getAgentByEMAIL(String email) throws SQLException {
+        Agente agente = null;
+        ResultSet rs = puente.getQueryResults("SELECT * FROM cliente WHERE email='"+email+"' AND" +
+                "cliente="+1+" LIMIT 1;");
+        if(rs.next()) {
+            agente = new Agente(rs.getString("nombre"),rs.getString("apellidos"),
+                    rs.getString("email"), rs.getString("tipo"));
+        }
+        return agente;
+    }
 }
