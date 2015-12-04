@@ -86,7 +86,7 @@ public class Circuito {
         String sql ="("+"'"+getIdcircuito()+"'"+","+"'"+getDescripcion()+"'"+","+"'"+getCSalida()+"'"+","
                 +"'"+getPSalida()+"'"+","+"'"+getCLlegada()+"'"+","+"'"+getPLlegada()+"'"+","+"'"+getDuracion()+"'"+","
                 +"'"+getPrecio()+"'"+")";
-        System.out.println(sql);
+        System.out.println(sql);//
 
         rs = puente.getQueryResults("circuito(descripcion, ciudadSalida, paisSalida, ciudadLlegada, paisLlegada, duracion," +
                 "precio) VALUES " +  sql);
