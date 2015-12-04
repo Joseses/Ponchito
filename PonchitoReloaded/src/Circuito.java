@@ -69,7 +69,7 @@ public class Circuito {
         this.etapa.add(lugarVisitar);
     }
 
-    public String sqlfyThisCircuit()throws Exception  {
+    public void sqlfyThisCircuit()throws Exception  {
 
         puente = new Puente("beto");
 
@@ -83,8 +83,12 @@ public class Circuito {
         else
             max=max+1;
 
-        String sql=" ";//="("+getIdcircuito()+","+getDescripcion()+","+getLugarSalida()+","+getLugarLlegada()+","+getDuracion()+","+getPrecio()
+        String sql ="("+"'"+getIdcircuito()+"'"+","+"'"+getDescripcion()+"'"+","+"'"+getCSalida()+"'"+","
+                +"'"+getPSalida()+"'"+","+"'"+getCLlegada()+"'"+","+"'"+getPLlegada()+"'"+","+"'"+getDuracion()+"'"+","
+                +"'"+getPrecio()+"'"+")";
+        System.out.println(sql);
 
-        return sql;
+        rs = puente.getQueryResults("circuito(descripcion, ciudadSalida, paisSalida, ciudadLlegada, paisLlegada, duracion," +
+                "precio) VALUES " +  sql);
     }
 }
