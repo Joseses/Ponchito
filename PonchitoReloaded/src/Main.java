@@ -75,9 +75,22 @@ public class Main extends Application {
         //launch();
         MetaCreador metaCreador = new MetaCreador(puente);
         ArrayList<LugarVisitar> lugares = metaCreador.crearLugar();
+        ArrayList<Hotel> hoteles = metaCreador.crearHoteles();
+        ArrayList<Circuito> circuitos = metaCreador.crearCircuitos();
+
         for(int i = 0; i<lugares.size();i++) {
             LugarVisitar lugarVisitar = lugares.get(i);
             System.out.println(lugarVisitar.getNombre());
+        }
+
+        for(int i = 0; i<hoteles.size();i++) {
+            Hotel hotel = hoteles.get(i);
+            System.out.println(hotel.getNombreHotel());
+        }
+
+        for(int i = 0; i<circuitos.size();i++) {
+            Circuito circuito = circuitos.get(i);
+            System.out.println(circuito.getLugarSalida()[0]+"  "+circuito.getLugarLlegada()[0]);
         }
 
     }
