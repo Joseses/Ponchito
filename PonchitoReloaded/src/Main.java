@@ -57,7 +57,7 @@ public class Main extends Application {
 		Parent page = fxmlLoader.load(getClass().getResource(fxml).openStream());
 		Scene scene = stage.getScene();
 		if (scene == null) {
-			scene = new Scene(page, 600, 600);
+			scene = new Scene(page, 1000, 600);
 			stage.setTitle("Agencia de viajes Ponchito");
 			stage.setResizable(false);
 			//scene.getStylesheets().add(Main.class.getResource("demo.css").toExternalForm());

@@ -8,6 +8,7 @@ import javafx.scene.shape.Path;
 import javafx.scene.text.Text;
 import javafx.util.Duration;
 
+
 public class StartScreen {
 
     public Text greeText;
@@ -24,6 +25,10 @@ public class StartScreen {
             Button clickedBtn = (Button) source; // Botón del clic
             if(clickedBtn.getText().equalsIgnoreCase("Agente")) {
                 instancia.gotoFolleto("Agente");
+            } else if(clickedBtn.getText().equalsIgnoreCase("Cliente")) {
+                instancia.gotoFolleto("Cliente");
+            } else {
+                instancia.gotoFolleto("Usuario");
             }
 
         }

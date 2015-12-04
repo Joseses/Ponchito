@@ -13,7 +13,6 @@ public class Agente extends User {
     }
 
     public ArrayList<LugarVisitar> getLugares() throws SQLException {
-        System.out.println("Hola2");
         return metaCreador.crearLugar();
     }
 }
