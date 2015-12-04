@@ -1,7 +1,8 @@
 public class Hotel {
 
     String nombreHotel;
-    String[] localizacion;
+    String ciudad;
+    String pais; //www
     String direccion;
     int numCuartos;
     double precioCuarto;
@@ -9,46 +10,43 @@ public class Hotel {
 
     public Hotel() {
         nombreHotel = "";
-        localizacion = new String[2];
+        ciudad = "";
+        pais = "";
         direccion = "";
         numCuartos = 0;
         precioCuarto = 0;
         precioDesayuno = 0;
     }
 
-    public Hotel(String nomh, String[] loc, String dir, int numc, double precc, double precd) {
+    public Hotel(String nomh, String ciu, String pa, String dir, int numc, double precc, double precd) {
         nombreHotel = nomh;
-        localizacion = loc;
+        ciudad = ciu;
+        pais=pa;
         direccion = dir;
         numCuartos = numc;
         precioCuarto = precc;
         precioDesayuno = precd;
     }
 
-    public String getNombreHotel() {
-        return nombreHotel;
-    }
-    public String[] getLocalizacion() {
-        return localizacion;
-    }
-    public String getDireccion() {
-        return direccion;
-    }
-    public int getNumCuartos() {
-        return numCuartos;
-    }
+    public String getNombreHotel() {return nombreHotel;}
+    public String getCiudad(){return ciudad; }
+    public String getPais(){return pais; }
+    public String getDireccion() {return direccion;}
+    public int getNumCuartos() {return numCuartos;}
     public double getPrecioCuarto() {
         return precioCuarto;
     }
     public double getPrecioDesayuno() {
         return precioDesayuno;
     }
+
     public void setNombreHotel(String nomh) {
         nombreHotel = nomh;
     }
-    public void setLocalizacion(String[] loc) {
-        localizacion = loc;
+    public void setCiudad(String ciu) {
+        ciudad = ciu;
     }
+    public void setPais(String pa){pais = pa;}
     public void setDireccion(String dir) {
         direccion = dir;
     }
