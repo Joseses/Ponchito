@@ -28,7 +28,7 @@ public class Circuito {
         etapa = new ArrayList<LugarVisitar>();
     }
 
-    public Circuito(int id, String des, String csal, String psal, String clle, String plle, String dur, int p) {
+    public Circuito(int id, String des, String csal, String psal, String clle, String plle, String dur, double p) {
         idcircuito=id;
         descripcion= des;
         ciudadSalida=csal;

@@ -37,12 +37,11 @@ public class MetaCreador {
 
     public ArrayList<Circuito> crearCircuitos() throws SQLException {
         ArrayList<Circuito> circuitos = new ArrayList<Circuito>();
-        ResultSet rs = puente.getQueryResults("Select  *\n" +
-                "from circuito;");
+        ResultSet rs = puente.getQueryResults("Select  * from circuito;");
         while(rs.next()) {
             Circuito circuito = new Circuito(rs.getInt("idcircuito"), rs.getString("descripcion"),rs.getString("ciudadSalida"),
                     rs.getString("paisSalidad"),rs.getString("ciudadLlegada"),rs.getString("paisLlegada"), rs.getString("duracion"),
-                    rs.getInt("precio"));
+                    rs.getDouble("precio"));
             circuitos.add(circuito);
         }
         return circuitos;
