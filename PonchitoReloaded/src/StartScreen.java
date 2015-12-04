@@ -8,6 +8,7 @@ import javafx.scene.shape.Path;
 import javafx.scene.text.Text;
 import javafx.util.Duration;
 
+
 public class StartScreen {
 
     public Text greeText;
