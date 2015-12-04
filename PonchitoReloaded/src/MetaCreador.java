@@ -21,6 +21,7 @@ public class MetaCreador {
             LugarVisitar lugar = new LugarVisitar(rs.getString("nombre"), loc, rs.getString("direccion"),
                                                 rs.getString("descripcion"), rs.getDouble("precio"));
             lugares.add(lugar);
+            System.out.println("Hola");
         }
         return lugares;
     }
