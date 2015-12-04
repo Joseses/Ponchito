@@ -12,14 +12,11 @@ public class MetaCreador {
     public ArrayList<LugarVisitar> crearLugar() throws SQLException {
 
         ArrayList<LugarVisitar> lugares = new ArrayList<LugarVisitar>();
-        ResultSet rs = puente.getQueryResults("SELECT * FROM lugarVisitar LEFT JOIN localizacion\n" +
-                "on lugarVisitar.localizacion = idloc;");
+        ResultSet rs = puente.getQueryResults("SELECT * FROM lugarVisitar natural join ciudad;");
         while(rs.next()) {
-            String[] loc = new String[2];
-            loc[0] = rs.getString("ciudad");
-            loc[1] = rs.getString("pais");
-            LugarVisitar lugar = new LugarVisitar(rs.getString("nombre"), loc, rs.getString("direccion"),
-                                                rs.getString("descripcion"), rs.getDouble("precio"));
+            LugarVisitar lugar = new LugarVisitar(rs.getString("nombre"),rs.getString("ciudad"),
+                    rs.getString("pais"), rs.getString("direccion"), rs.getString("descripcion"),
+                    rs.getDouble("precio"));
             lugares.add(lugar);
             System.out.println("Hola");
         }
@@ -31,11 +28,9 @@ public class MetaCreador {
         ResultSet rs = puente.getQueryResults("Select * From hotel left join localizacion\n" +
                 "on localizacion.idloc = hotel.localizacion;");
         while(rs.next()) {
-            String[] loc = new String[2];
-            loc[0] = rs.getString("ciudad");
-            loc[1] = rs.getString("pais");
-            Hotel hotel = new Hotel(rs.getString("nombreHotel"), loc, rs.getString("direccion"),
-                                                rs.getInt("numCuartos"), rs.getDouble("precioCuarto"), rs.getDouble("precioDesayuno"));
+            Hotel hotel = new Hotel(rs.getString("nombreHotel"), rs.getString("ciudad"), rs.getString("pais"),
+                    rs.getString("direccion"), rs.getInt("numCuartos"), rs.getDouble("precioCuarto"),
+                    rs.getDouble("precioDesayuno"));
             hoteles.add(hotel);
         }
         return hoteles;
