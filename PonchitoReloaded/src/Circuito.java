@@ -88,7 +88,7 @@ public class Circuito {
                 +"'"+getPrecio()+"'"+")";
         System.out.println(sql);//
 
-        rs = puente.getQueryResults("circuito(descripcion, ciudadSalida, paisSalida, ciudadLlegada, paisLlegada, duracion," +
+        rs = puente.getQueryResults("Inser into circuito(descripcion, ciudadSalida, paisSalida, ciudadLlegada, paisLlegada, duracion," +
                 "precio) VALUES " +  sql);
     }
 }
