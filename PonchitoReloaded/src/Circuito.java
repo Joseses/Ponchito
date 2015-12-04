@@ -1,3 +1,5 @@
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 
 public class Circuito {
@@ -8,7 +10,9 @@ public class Circuito {
 	private String duracion;
 	private double precio;
     private ArrayList<LugarVisitar> etapa;
+
     private String fecha;
+	public Puente puente;
 	
 	public Circuito() {
 		idcircuito=0;
@@ -55,7 +59,22 @@ public class Circuito {
         this.etapa.add(lugarVisitar);
     }
 
-    public String sqlfyThisCircuit(){
-        return null;
+    public String sqlfyThisCircuit()throws Exception  {
+
+		puente = new Puente("beto");
+
+		MetaCreador metaCreador = new MetaCreador(puente);
+		ResultSet rs = puente.getQueryResults("Select Max(idcircuito) from circuito;");
+        rs.next();
+        int max  = rs.getInt("Max(idcircuito)");
+        if(max==0){
+            max=1;
+        }
+        else
+            max=max+1;
+
+        String sql=" ";//="("+getIdcircuito()+","+getDescripcion()+","+getLugarSalida()+","+getLugarLlegada()+","+getDuracion()+","+getPrecio()
+
+        return sql;
     }
 }
